@@ -30,3 +30,6 @@ Route::get('sidebar', function(){
 Route::get('index', function(){
     return view('dashboard.index');
 });
+Route::get('dashboard', function(){
+    return view('dashboard');
+});
