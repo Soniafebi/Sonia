@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', function () {
+    return "welcome kategori";
+});
+
+route:: resource('kategori','CategoryController');
+
+Route::get('master', function(){
+    return view('layout.master');
+});
+Route::get('sidebar', function(){
+    return view('layout.sidebar');
+});
+Route::get('index', function(){
+    return view('dashboard.index');
+});
