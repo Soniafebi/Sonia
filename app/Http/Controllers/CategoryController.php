@@ -10,8 +10,9 @@ class CategoryController extends Controller
     
     public function index()
     {
-        $hasil = category::all();
-        return view('kategori', ['data'=>$hasil]);
+        $categories = Category::all();
+        return view('index', compact('categories'));
+        dd($categories);
     }
 
 }

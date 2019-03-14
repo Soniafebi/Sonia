@@ -19,7 +19,7 @@ Route::get('/', function () {
     return "welcome kategori";
 });
 
-route:: resource('kategori','CategoryController');
+Route::resource('category','CategoryController');
 
 Route::get('master', function(){
     return view('layout.master');
@@ -33,3 +33,9 @@ Route::get('index', function(){
 Route::get('dashboard', function(){
     return view('dashboard');
 });
+
+Route::get('app', function(){
+    return view('master.app');
+});
+
+
