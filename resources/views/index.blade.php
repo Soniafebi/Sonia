@@ -63,8 +63,37 @@
 
               <div class="box-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+                <form action="{{ url('query') }}" method="GET">
 
+                      <div class="box-body">
+
+                        <div class="row">
+
+                          <div class="col-xs-5">
+
+                            <div class="input-group">
+
+                              <div class="input-group-btn">
+
+                              <button type="submit" class="btn btn-danger">Cari</button>
+
+                              </div>
+
+                              <!-- /btn-group -->
+
+    
+
+                              <input type="text" class="form-control" name="cari" placeholder="Search Data Kategori..">
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </form>
                   <div class="input-group-btn">
                     <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                   </div>
@@ -76,10 +105,16 @@
             <table border="3px solid black">
         <tr>
             <td>Nama Kategori</td>
+            <td> Action </td>
         </tr>    
         @foreach($categories as $li)
         <tr>
             <td>{{ $li->category_name }}</td>
+            <td>
+                  <a href="/edit/edit/{{ $li->category_id }}">Edit</a>
+                  <a href="/hapus/destroy/{{ $li->category_id }}">Edit</a>
+            
+            </td>
         </tr>
         @endforeach
     </table>

@@ -38,4 +38,10 @@ Route::get('app', function(){
     return view('master.app');
 });
 
+Route::get('/edit/edit/{category_id}','CategoryController@edit');
 
+Route::post('/datakategori/update','CategoryController@update');
+
+Route::get('/hapus/destroy/{category_id}','CategoryController@destroy');
+
+Route::get('query', 'CategoryController@search');
